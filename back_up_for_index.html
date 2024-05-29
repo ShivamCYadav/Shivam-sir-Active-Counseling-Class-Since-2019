@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Counseling Class</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header,
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header h1,
+        .footer p {
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .results p {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .map-link a,
+        .contact-number a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .map-link a:hover,
+        .contact-number a:hover {
+            text-decoration: underline;
+        }
+
+        .marquee {
+            background-color: #ffc107;
+            color: #343a40;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header text-center">
+        <div class="container">
+            <h1><i class="fas fa-graduation-cap"></i> Active Counseling Class</h1>
+            <p>Redefining Success Since 2019</p>
+        </div>
+    </div>
+
+    <div class="container content">
+        <div class="marquee">
+            <span>Admission Open: 11th Science PCM, PCMB | 10th STD | 1st to 9th STD - Lowest Fees | Regular Classes + Extra Classes for Free | No Extra Fees for Extra Class</span>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 mb-5">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Teaching Staff</h2>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-user-tie"></i> Shivam Yadav (BE) - 7 years experience <progress value="7" max="10"></progress></li>
+                            <li><i class="fas fa-user-tie"></i> Neha Bhamare (MCS) - 3 years experience <progress value="3" max="10"></progress></li>
+                            <li><i class="fas fa-user-tie"></i> Aditya Singh (BCS) - 2 years experience <progress value="2" max="10"></progress></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Contact Us</h2>
+                        <p class="card-text"><i class="fas fa-phone-alt"></i> Phone: <span class="contact-number"><a href="tel:9860985557">9860985557</a></span></p>
+                        <p class="card-text"><i class="fab fa-whatsapp"></i> WhatsApp: <span class="contact-number"><a href="tel:9822457236">9822457236</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">About Us</h2>
+                        <p class="card-text">Welcome to Active Counseling Class. We offer quality education for students from 1st to 10th standard in English, Marathi, Hindi, and semi-English. We cater to Maharashtra Board and CBSE students.</p>
+                        <p class="card-text">For 11th and 12th standard, we offer Science courses with specializations in PCM (Physics, Chemistry, Mathematics) and PCMB (Physics, Chemistry, Mathematics, Biology). We also provide special English classes.</p>
+                        <p class="card-text">Additional subjects we teach include Spoken English, and Diploma and Engineering subjects of Civil and Mechanical.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Class taken for:</h2>
+                        <p class="card-text">
+                            <h5><b>1st to 10th</b> standard in English, Marathi, Hindi, and semi-English</h5>
+                            <h5>11th and 12th Science <b>PCM or PCMB</b></h5>
+                            <h5>Diploma and Engineering subjects of <b>Civil and Mechanical</b>.</h5>
+                        </p>
+                        <h4 class="card-text fw-bold">Join Us to Shape Your Future!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Our Results</h2>
+                        <div class="results">
+                            <p><i class="fas fa-award"></i> 2024 10th SSC - Maharashtra Board Result: 100%</p>
+                            <p><i class="fas fa-award"></i> 2023 10th SSC - Maharashtra Board Result: 100%</p>
+                            <p><i class="fas fa-award"></i> 2022 10th SSC - Maharashtra Board Result: 100%</p>
+                            <p><i class="fas fa-award"></i> 2022 12th HSC - Maharashtra Board Result: 100%</p>
+                            <p><i class="fas fa-award"></i> 2021 10th SSC - Maharashtra Board Result: 100%</p>
+                            <p><i class="fas fa-award"></i> 2020 10th SSC - Maharashtra Board Result: 100%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Find Us</h2>
+                            <p class="card-text">Location:</p>
+                            <div class="map-link">
+                                <a href="https://maps.app.goo.gl/toKZryr2aXKKUuEQA" target="_blank">Active Counseling Class Location <i class="fas fa-map-marker-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer text-center">
+            <div class="container">
+                <p> 2019 &copy; Active Counseling Class.</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
