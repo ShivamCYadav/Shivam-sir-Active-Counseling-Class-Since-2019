@@ -757,9 +757,16 @@ let userAnswers = [];
 
 function getRandomQuestions(topic, numQuestions) {
     const questions = quizzes[topic];
-    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    const shuffledQuestions = [...questions]; // Copy the array to avoid modifying the original
+    for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
+    }
     return shuffledQuestions.slice(0, numQuestions);
 }
+    // const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    // return shuffledQuestions.slice(0, numQuestions);
+// }
 
 function displayQuestion() {
     const question = currentQuestions[currentQuestionIndex];
