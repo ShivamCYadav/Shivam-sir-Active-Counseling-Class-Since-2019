@@ -827,8 +827,10 @@ function displayResult() {
     const scoreHTML = `
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title">Score</h5>
+                <h5 class="card-title">Here's your Score!!</h5>
                 <p class="card-text">You scored ${score} out of ${currentQuestions.length}</p>
+                <h6> Thanks for Visiting. &#128519 &#128519 </h6>
+                <h6> Regards, Shivam Yadav </h6>
             </div>
         </div>
     `;
