@@ -246,505 +246,505 @@ const quizzes = {
         {
             question: "Which of the following is NOT a greenhouse gas?",
             options: ["Carbon dioxide", "Methane", "Nitrous oxide", "Oxygen"],
-            answer: "D) Oxygen"
+            answer: "Oxygen"
         },
         {
             question: "What is the chemical symbol for gold?",
             options: ["Au", "Ag", "Cu", "Fe"],
-            answer: "A) Au"
+            answer: "Au"
         },
         {
             question: "What is the largest organ in the human body?",
             options: ["Liver", "Skin", "Brain", "Heart"],
-            answer: "B) Skin"
+            answer: "Skin"
         },
         {
             question: "Which planet is known as the 'Red Planet'?",
             options: ["Venus", "Mars", "Jupiter", "Saturn"],
-            answer: "B) Mars"
+            answer: "Mars"
         },
         {
             question: "What is the chemical formula for water?",
             options: ["H2O2", "H2O", "CO2", "CH4"],
-            answer: "B) H2O"
+            answer: "H2O"
         },
         {
             question: "What is the unit of electric current?",
             options: ["Watt", "Volt", "Ampere", "Ohm"],
-            answer: "C) Ampere"
+            answer: "Ampere"
         },
         {
             question: "Which scientist is known for his theory of relativity?",
             options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Stephen Hawking"],
-            answer: "B) Albert Einstein"
+            answer: "Albert Einstein"
         },
         {
             question: "What is the process by which plants make their food?",
             options: ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"],
-            answer: "B) Photosynthesis"
+            answer: "Photosynthesis"
         },
         {
             question: "Which element is the main component of the Earth's atmosphere?",
             options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Argon"],
-            answer: "A) Nitrogen"
+            answer: "Nitrogen"
         },
         {
             question: "What is the chemical symbol for iron?",
             options: ["Ir", "Fe", "Au", "Ag"],
-            answer: "B) Fe"
+            answer: "Fe"
         },
         {
             question: "What is the SI unit of force?",
             options: ["Watt", "Newton", "Joule", "Volt"],
-            answer: "B) Newton"
+            answer: "Newton"
         },
         {
             question: "Which planet is known as the 'Morning Star' or 'Evening Star'?",
             options: ["Mercury", "Venus", "Mars", "Jupiter"],
-            answer: "B) Venus"
+            answer: "Venus"
         },
         {
             question: "What is the chemical formula for methane?",
             options: ["CH4", "CO2", "H2O", "NH3"],
-            answer: "A) CH4"
+            answer: "CH4"
         },
         {
             question: "What is the pH value of pure water?",
             options: ["7", "1", "14", "0"],
-            answer: "A) 7"
+            answer: "7"
         },
         {
             question: "What is the hardest naturally occurring substance on Earth?",
             options: ["Iron", "Diamond", "Quartz", "Graphite"],
-            answer: "B) Diamond"
+            answer: "Diamond"
         },
         {
             question: "Which type of energy is associated with motion?",
             options: ["Potential energy", "Kinetic energy", "Thermal energy", "Chemical energy"],
-            answer: "B) Kinetic energy"
+            answer: "Kinetic energy"
         },
         {
             question: "What is the unit of measurement for frequency?",
             options: ["Watt", "Hertz", "Pascal", "Ampere"],
-            answer: "B) Hertz"
+            answer: "Hertz"
         },
         {
             question: "Which gas is responsible for the depletion of the ozone layer?",
             options: ["Carbon dioxide", "Methane", "Chlorofluorocarbons (CFCs)", "Nitrous oxide"],
-            answer: "C) Chlorofluorocarbons (CFCs)"
+            answer: "Chlorofluorocarbons (CFCs)"
         },
         {
             question: "What is the study of the Earth's atmosphere called?",
             options: ["Geology", "Meteorology", "Astronomy", "Oceanography"],
-            answer: "B) Meteorology"
+            answer: "Meteorology"
         },
         {
             question: "Which subatomic particle has a positive charge?",
             options: ["Proton", "Electron", "Neutron", "Photon"],
-            answer: "A) Proton"
+            answer: "Proton"
         }
     ],
     math: [
         {
             question: "What is the value of π (pi) rounded to two decimal places?",
             options: ["3.14", "3.15", "3.16", "3.13"],
-            answer: "A) 3.14"
+            answer: "3.14"
         },
         {
             question: "What is the square root of 144?",
             options: ["12", "11", "10", "13"],
-            answer: "A) 12"
+            answer: "12"
         },
         {
             question: "What is the value of 5 squared?",
             options: ["10", "25", "5", "50"],
-            answer: "B) 25"
+            answer: "25"
         },
         {
             question: "What is the sum of the interior angles of a triangle?",
             options: ["180 degrees", "90 degrees", "270 degrees", "360 degrees"],
-            answer: "A) 180 degrees"
+            answer: "180 degrees"
         },
         {
             question: "What is the value of 10 divided by 2?",
             options: ["5", "10", "2", "20"],
-            answer: "A) 5"
+            answer: "5"
         },
         {
             question: "What is the area of a square with a side length of 6 units?",
             options: ["12 square units", "24 square units", "36 square units", "18 square units"],
-            answer: "C) 36 square units"
+            answer: "36 square units"
         },
         {
             question: "What is the next prime number after 7?",
             options: ["8", "9", "10", "11"],
-            answer: "D) 11"
+            answer: "11"
         },
         {
             question: "What is the perimeter of a rectangle with length 8 units and width 5 units?",
             options: ["13 units", "26 units", "40 units", "18 units"],
-            answer: "B) 26 units"
+            answer: "26 units"
         },
         {
             question: "What is the value of 3 factorial (3!)?",
             options: ["3", "6", "9", "12"],
-            answer: "B) 6"
+            answer: "6"
         },
         {
             question: "What is the value of 2 to the power of 4 (2^4)?",
             options: ["6", "8", "12", "16"],
-            answer: "B) 8"
+            answer: "8"
         },
         {
             question: "If x = 5 and y = 3, what is the value of x + y?",
             options: ["15", "8", "2", "18"],
-            answer: "A) 8"
+            answer: "8"
         },
         {
             question: "What is the value of the square root of 25?",
             options: ["5", "10", "2", "625"],
-            answer: "A) 5"
+            answer: "5"
         },
         {
             question: "What is the value of 3 multiplied by 4?",
             options: ["7", "12", "1", "34"],
-            answer: "B) 12"
+            answer: "12"
         },
         {
             question: "What is the value of 10 minus 7?",
             options: ["17", "3", "107", "70"],
-            answer: "B) 3"
+            answer: "3"
         },
         {
             question: "What is the value of 3 plus 6 times 2?",
             options: ["18", "15", "12", "9"],
-            answer: "B) 15"
+            answer: "15"
         },
         {
             question: "If a = 2 and b = 3, what is the value of a squared plus b squared?",
             options: ["5", "6", "7", "13"],
-            answer: "D) 13"
+            answer: "13"
         },
         {
             question: "What is the value of 20 divided by 4?",
             options: ["4", "5", "6", "8"],
-            answer: "B) 5"
+            answer: "5"
         },
         {
             question: "What is the value of 9 multiplied by 7?",
             options: ["16", "63", "56", "72"],
-            answer: "B) 63"
+            answer: "63"
         },
         {
             question: "If x = 8 and y = 2, what is the value of x divided by y?",
             options: ["4", "10", "6", "16"],
-            answer: "A) 4"
+            answer: "4"
         },
         {
             question: "What is the value of 2 to the power of 3 (2^3)?",
             options: ["6", "8", "12", "16"],
-            answer: "B) 8"
+            answer: "8"
         }
     ],
     physics: [
         {
             question: "What is the SI unit of energy?",
             options: ["Watt", "Joule", "Newton", "Ampere"],
-            answer: "B) Joule"
+            answer: "Joule"
         },
         {
             question: "What force keeps planets in orbit around the Sun?",
             options: ["Gravitational force", "Magnetic force", "Frictional force", "Tension force"],
-            answer: "A) Gravitational force"
+            answer: "Gravitational force"
         },
         {
             question: "What is the SI unit of power?",
             options: ["Joule", "Watt", "Newton", "Volt"],
-            answer: "B) Watt"
+            answer: "Watt"
         },
         {
             question: "Which scientist is credited with the discovery of the law of universal gravitation?",
             options: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"],
-            answer: "B) Isaac Newton"
+            answer: "Isaac Newton"
         },
         {
             question: "What is the acceleration due to gravity on Earth?",
             options: ["9.8 m/s^2", "6.67 × 10^-11 N m^2/kg^2", "3 × 10^8 m/s^2", "3.14 m/s^2"],
-            answer: "A) 9.8 m/s^2"
+            answer: "9.8 m/s^2"
         },
         {
             question: "What is the SI unit of force?",
             options: ["Watt", "Newton", "Joule", "Volt"],
-            answer: "B) Newton"
+            answer: "Newton"
         },
         {
             question: "What is the SI unit of electric charge?",
             options: ["Coulomb", "Ampere", "Ohm", "Volt"],
-            answer: "A) Coulomb"
+            answer: "Coulomb"
         },
         {
             question: "What is the SI unit of frequency?",
             options: ["Hertz", "Watt", "Ohm", "Pascal"],
-            answer: "A) Hertz"
+            answer: "Hertz"
         },
         {
             question: "What is the SI unit of electric current?",
             options: ["Ampere", "Coulomb", "Ohm", "Watt"],
-            answer: "A) Ampere"
+            answer: "Ampere"
         },
         {
             question: "Which law states that every object will remain at rest or in uniform motion in a straight line unless compelled to change its state by the action of an external force?",
             options: ["Newton's First Law of Motion", "Newton's Second Law of Motion", "Newton's Third Law of Motion", "Law of Universal Gravitation"],
-            answer: "A) Newton's First Law of Motion"
+            answer: "Newton's First Law of Motion"
         },
         {
             question: "What is the SI unit of electric potential difference?",
             options: ["Volt", "Ampere", "Watt", "Ohm"],
-            answer: "A) Volt"
+            answer: "Volt"
         },
         {
             question: "What is the SI unit of electric resistance?",
             options: ["Ohm", "Volt", "Ampere", "Watt"],
-            answer: "A) Ohm"
+            answer: "Ohm"
         },
         {
             question: "What is the phenomenon where light bends as it passes through different mediums?",
             options: ["Reflection", "Refraction", "Diffraction", "Dispersion"],
-            answer: "B) Refraction"
+            answer: "Refraction"
         },
         {
             question: "What is the SI unit of magnetic flux?",
             options: ["Tesla", "Weber", "Henry", "Gauss"],
-            answer: "B) Weber"
+            answer: "Weber"
         },
         {
             question: "What is the law that states that for every action, there is an equal and opposite reaction?",
             options: ["Newton's First Law of Motion", "Newton's Second Law of Motion", "Newton's Third Law of Motion", "Law of Universal Gravitation"],
-            answer: "C) Newton's Third Law of Motion"
+            answer: "Newton's Third Law of Motion"
         },
         {
             question: "What type of lens converges light rays to a single point?",
             options: ["Concave lens", "Convex lens", "Plano-concave lens", "Plano-convex lens"],
-            answer: "B) Convex lens"
+            answer: "Convex lens"
         },
         {
             question: "What is the SI unit of work and energy?",
             options: ["Joule", "Watt", "Newton", "Ampere"],
-            answer: "A) Joule"
+            answer: "Joule"
         },
         {
             question: "Which type of electromagnetic radiation has the shortest wavelength?",
             options: ["Radio waves", "Microwaves", "X-rays", "Gamma rays"],
-            answer: "D) Gamma rays"
+            answer: "Gamma rays"
         },
         {
             question: "What is the process by which a substance changes directly from a solid to a gas without passing through the liquid state?",
             options: ["Sublimation", "Evaporation", "Condensation", "Melting"],
-            answer: "A) Sublimation"
+            answer: "Sublimation"
         }
     ],
     biology: [
         {
             question: "Which organelle is responsible for producing energy in a cell?",
             options: ["Nucleus", "Mitochondria", "Golgi apparatus", "Endoplasmic reticulum"],
-            answer: "B) Mitochondria"
+            answer: "Mitochondria"
         },
         {
             question: "What is the largest organ in the human body?",
             options: ["Liver", "Skin", "Brain", "Heart"],
-            answer: "B) Skin"
+            answer: "Skin"
         },
         {
             question: "Which of the following is NOT a function of the human skeleton?",
             options: ["Protection of internal organs", "Production of red blood cells", "Support for the body", "Storage of minerals"],
-            answer: "B) Production of red blood cells"
+            answer: "Production of red blood cells"
         },
         {
             question: "What is the main function of red blood cells?",
             options: ["Carrying oxygen", "Fighting infection", "Producing antibodies", "Clotting blood"],
-            answer: "A) Carrying oxygen"
+            answer: "Carrying oxygen"
         },
         {
             question: "Which part of the plant is responsible for photosynthesis?",
             options: ["Roots", "Leaves", "Stem", "Flowers"],
-            answer: "B) Leaves"
+            answer: "Leaves"
         },
         {
             question: "What is the process by which plants make their food?",
             options: ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"],
-            answer: "B) Photosynthesis"
+            answer: "Photosynthesis"
         },
         {
             question: "Which system of the human body is responsible for pumping blood?",
             options: ["Digestive system", "Respiratory system", "Circulatory system", "Nervous system"],
-            answer: "C) Circulatory system"
+            answer: "Circulatory system"
         },
         {
             question: "What is the process by which plants lose water vapor through small pores in their leaves?",
             options: ["Transpiration", "Photosynthesis", "Respiration", "Evaporation"],
-            answer: "A) Transpiration"
+            answer: "Transpiration"
         },
         {
             question: "What is the main function of the respiratory system?",
             options: ["Transportation of nutrients", "Production of hormones", "Exchange of gases", "Protection against pathogens"],
-            answer: "C) Exchange of gases"
+            answer: "Exchange of gases"
         },
         {
             question: "What is the powerhouse of the cell?",
             options: ["Nucleus", "Mitochondria", "Golgi apparatus", "Endoplasmic reticulum"],
-            answer: "B) Mitochondria"
+            answer: "Mitochondria"
         },
         {
             question: "What is the basic unit of heredity?",
             options: ["Chromosome", "Gene", "DNA", "Protein"],
-            answer: "B) Gene"
+            answer: "Gene"
         },
         {
             question: "Which of the following is NOT a function of the liver?",
             options: ["Detoxification", "Production of bile", "Regulation of blood sugar", "Production of insulin"],
-            answer: "D) Production of insulin"
+            answer: "Production of insulin"
         },
         {
             question: "Which part of the human brain is responsible for coordination and balance?",
             options: ["Cerebrum", "Cerebellum", "Brainstem", "Thalamus"],
-            answer: "B) Cerebellum"
+            answer: "Cerebellum"
         },
         {
             question: "What is the chemical substance found in chromosomes that carries genetic information?",
             options: ["RNA", "Protein", "DNA", "Enzyme"],
-            answer: "C) DNA"
+            answer: "DNA"
         },
         {
             question: "What is the process by which plants and some other organisms convert light energy into chemical energy?",
             options: ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"],
-            answer: "B) Photosynthesis"
+            answer: "Photosynthesis"
         },
         {
             question: "What is the name of the pigment responsible for the green color of plants?",
             options: ["Chlorophyll", "Melanin", "Hemoglobin", "Carotene"],
-            answer: "A) Chlorophyll"
+            answer: "Chlorophyll"
         },
         {
             question: "Which of the following is NOT a type of tissue in the human body?",
             options: ["Nervous tissue", "Epithelial tissue", "Bone tissue", "Metalloid tissue"],
-            answer: "D) Metalloid tissue"
+            answer: "Metalloid tissue"
         },
         {
             question: "What is the smallest unit of life?",
             options: ["Cell", "Tissue", "Organ", "Organism"],
-            answer: "A) Cell"
+            answer: "Cell"
         },
         {
             question: "What is the name of the process by which plants absorb water from the soil?",
             options: ["Photosynthesis", "Transpiration", "Respiration", "Osmosis"],
-            answer: "D) Osmosis"
+            answer: "Osmosis"
         },
         {
             question: "Which of the following is NOT a function of the human nervous system?",
             options: ["Regulation of body temperature", "Transmission of nerve impulses", "Coordination of body movements", "Control of voluntary and involuntary actions"],
-            answer: "A) Regulation of body temperature"
+            answer: "Regulation of body temperature"
         }
     ],
     chemistry: [
         {
             question: "What is the chemical symbol for oxygen?",
             options: ["O", "H", "N", "C"],
-            answer: "A) O"
+            answer: "O"
         },
         {
             question: "What is the chemical formula for water?",
             options: ["HO", "CO2", "H2O", "O2"],
-            answer: "C) H2O"
+            answer: "H2O"
         },
         {
             question: "What is the chemical symbol for gold?",
             options: ["Au", "Ag", "Cu", "Fe"],
-            answer: "A) Au"
+            answer: "Au"
         },
         {
             question: "What is the chemical formula for table salt?",
             options: ["NaCl", "H2O", "CO2", "HCl"],
-            answer: "A) NaCl"
+            answer: "NaCl"
         },
         {
             question: "Which of the following elements is a noble gas?",
             options: ["Oxygen", "Nitrogen", "Helium", "Carbon"],
-            answer: "C) Helium"
+            answer: "Helium"
         },
         {
             question: "What is the chemical formula for hydrogen peroxide?",
             options: ["H2O2", "H2O", "CO2", "NH3"],
-            answer: "A) H2O2"
+            answer: "H2O2"
         },
         {
             question: "Which of the following is a halogen?",
             options: ["Sodium", "Chlorine", "Calcium", "Iron"],
-            answer: "B) Chlorine"
+            answer: "Chlorine"
         },
         {
             question: "What is the chemical symbol for silver?",
             options: ["Ag", "Au", "Al", "Fe"],
-            answer: "A) Ag"
+            answer: "Ag"
         },
         {
             question: "What is the chemical formula for methane?",
             options: ["CH4", "CO2", "H2O", "NH3"],
-            answer: "A) CH4"
+            answer: "CH4"
         },
         {
             question: "Which of the following is a noble gas?",
             options: ["Neon", "Oxygen", "Hydrogen", "Nitrogen"],
-            answer: "A) Neon"
+            answer: "Neon"
         },
         {
             question: "What is the chemical formula for carbon dioxide?",
             options: ["CO2", "CO", "H2O", "CH4"],
-            answer: "A) CO2"
+            answer: "CO2"
         },
         {
             question: "Which element is commonly used in batteries?",
             options: ["Lithium", "Sodium", "Potassium", "Calcium"],
-            answer: "A) Lithium"
+            answer: "Lithium"
         },
         {
             question: "What is the chemical formula for ammonia?",
             options: ["NH3", "H2O", "CO2", "CH4"],
-            answer: "A) NH3"
+            answer: "NH3"
         },
         {
             question: "What is the chemical formula for sulfuric acid?",
             options: ["H2SO4", "HCl", "H2O", "NaOH"],
-            answer: "A) H2SO4"
+            answer: "H2SO4"
         },
         {
             question: "Which of the following elements is a metalloid?",
             options: ["Silicon", "Aluminum", "Iron", "Calcium"],
-            answer: "A) Silicon"
+            answer: "Silicon"
         },
         {
             question: "What is the chemical formula for hydrochloric acid?",
             options: ["HCl", "H2SO4", "NaOH", "H2O"],
-            answer: "A) HCl"
+            answer: "HCl"
         },
         {
             question: "What is the chemical symbol for iron?",
             options: ["Fe", "Au", "Ag", "Pb"],
-            answer: "A) Fe"
+            answer: "Fe"
         },
         {
             question: "What is the chemical formula for sodium hydroxide?",
             options: ["NaOH", "H2SO4", "HCl", "NH3"],
-            answer: "A) NaOH"
+            answer: "NaOH"
         },
         {
             question: "Which of the following elements is a metal?",
             options: ["Copper", "Oxygen", "Fluorine", "Neon"],
-            answer: "A) Copper"
+            answer: "Copper"
         },
         {
             question: "What is the chemical formula for nitric acid?",
             options: ["HNO3", "H2SO4", "HCl", "NaOH"],
-            answer: "A) HNO3"
+            answer: "HNO3"
         }
     ]    
 };
