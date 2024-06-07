@@ -271,6 +271,30 @@ document.getElementById('selectionForm').addEventListener('submit', function(eve
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
+            } else if (grade === '10th' && medium === 'English' && subjects.includes('History')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/Maharashtra-Board-Class-10-History-and-Political-Science-Textbook-in-English.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = 'Maharashtra-Board-Class-10-History-and-Political-Science-Textbook-in-English.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else if (grade === '10th' && medium === 'Hindi' && subjects.includes('History')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/Maharashtra-Board-Class-10-History-and-Political-Science-Textbook-in-Hindi.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = 'Maharashtra-Board-Class-10-History-and-Political-Science-Textbook-in-Hindi.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else if (grade === '10th' && medium === 'Marathi' && subjects.includes('History')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/Maharashtra-Board-Class-10-History-and-Political-Science-Textbook-in-Marathi.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = 'Maharashtra-Board-Class-10-History-and-Political-Science-Textbook-in-Marathi.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
             } else if (grade === '10th' && medium === 'English' && subjects.includes('Maths-2')) {
                 const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/MSBSHSE-Class-10-Mathematics-Part-2-Textbook.pdf';
                 const a = document.createElement('a');
