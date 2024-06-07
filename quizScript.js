@@ -757,21 +757,21 @@ let userAnswers = [];
 
 function getRandomQuestions(topic, numQuestions) {
     const questions = quizzes[topic];
-    const shuffledQuestions = [...questions]; // Copy the array to avoid modifying the original
+    if (!questions) {
+        return [];
+    }
+    const shuffledQuestions = [...questions];
     for (let i = shuffledQuestions.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
     }
     return shuffledQuestions.slice(0, numQuestions);
 }
- //    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
- //    return shuffledQuestions.slice(0, numQuestions);
- // }
 
 function displayQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const quizContainer = document.getElementById('quiz');
-    quizContainer.innerHTML = ''; // Clear previous questions
+    quizContainer.innerHTML = '';
     const questionHTML = `
         <div class="card mb-3">
             <div class="card-body">
@@ -809,7 +809,7 @@ function submitAnswer() {
 
 function displayResult() {
     const quizContainer = document.getElementById('quiz');
-    quizContainer.innerHTML = ''; // Clear previous questions
+    quizContainer.innerHTML = '';
     let score = 0;
     for (let i = 0; i < currentQuestions.length; i++) {
         const question = currentQuestions[i];
@@ -853,6 +853,7 @@ function displayResult() {
 }
 
 function retest() {
+    currentQuestions = getRandomQuestions(currentTopic, 5);
     currentQuestionIndex = 0;
     userAnswers = [];
     displayQuestion();
@@ -861,8 +862,8 @@ function retest() {
 function changeTopic() {
     currentQuestionIndex = 0;
     userAnswers = [];
-    document.getElementById('quiz').innerHTML = ''; // Clear result and buttons
-    document.getElementById('quiz-topic').value = ''; // Reset topic selection
+    document.getElementById('quiz').innerHTML = '';
+    document.getElementById('quiz-topic').value = '';
 }
 function loadQuiz() {
     currentTopic = document.getElementById('quiz-topic').value;
