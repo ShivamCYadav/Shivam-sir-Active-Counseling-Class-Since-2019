@@ -407,6 +407,54 @@ document.getElementById('selectionForm').addEventListener('submit', function(eve
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'English' && subjects.includes('English')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/10th-MSB-English-EnglishMedium.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = '10th-MSB-English-EnglishMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'Marathi' && subjects.includes('English')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/marathi-medium/10th/10th-MSB-English-marathiMedium.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = '10th-MSB-English-marathiMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'Hindi' && subjects.includes('English')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/hindi-medium/10th/10th-MSB-English-hindiMedium.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = '10th-MSB-English-hindiMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'English' && subjects.includes('Hindi')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/10th-MSB-Hindi-EnglishMedium.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = '10th-MSB-Hindi-EnglishMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'Marathi' && subjects.includes('Hindi')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/marathi-medium/10th/10th-MSB-Hindi-Full-marathiMedium.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = '10th-MSB-Hindi-Full-marathiMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'Hindi' && subjects.includes('Hindi')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/hindi-medium/10th/10th-MSB-Hindi-hindiMedium.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = '10th-MSB-Hindi-hindiMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
             }else {
                 const availabilityModal = new bootstrap.Modal(document.getElementById('availabilityModal'), {
                     keyboard: false
