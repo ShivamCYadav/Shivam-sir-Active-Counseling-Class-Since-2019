@@ -205,6 +205,7 @@ document.getElementById('gradeSelect').addEventListener('change', function() {
         <option value="Science-2">Science-2</option>
         <option value="History">History</option>
         <option value="Geography">Geography</option>
+        <option value="Sanskrit">Sanskrit</option>
     ` : `
         <option value="" disabled selected>Select your subject</option>
         <option value="English">English</option>
@@ -479,6 +480,30 @@ document.getElementById('selectionForm').addEventListener('submit', function(eve
                 const a = document.createElement('a');
                 a.href = pdfPath;
                 a.download = '10th-MSB-Marathi-hindiMedium.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'Hindi' && subjects.includes('Sanskrit')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/MSBSHSE-Class-10-Sanskrit.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = 'MSBSHSE-Class-10-Sanskrit.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'Marathi' && subjects.includes('Sanskrit')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/MSBSHSE-Class-10-Sanskrit.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = 'MSBSHSE-Class-10-Sanskrit.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }else if (grade === '10th' && medium === 'English' && subjects.includes('Sanskrit')) {
+                const pdfPath = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/english-medium/10th/MSBSHSE-Class-10-Sanskrit.pdf';
+                const a = document.createElement('a');
+                a.href = pdfPath;
+                a.download = 'MSBSHSE-Class-10-Sanskrit.pdf';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
