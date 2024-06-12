@@ -1,0 +1,46 @@
+#sentence {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 18px;
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+
+#words {
+    margin-bottom: 10px;
+}
+
+.draggable {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: grab;
+    background-color: #f9f9f9;
+}
+
+.draggable:hover {
+    background-color: #eee;
+}
+
+#submit-btn, #reset-btn, #hint-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.droppable {
+    min-height: 40px;
+    border: 1px dashed #ccc;
+    padding: 5px;
+}
+
+#result {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
