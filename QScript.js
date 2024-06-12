@@ -90,7 +90,7 @@ submitBtn.addEventListener("click", () => {
     resultDiv.textContent = `Wrong. The correct sentence is: "${originalSentence}"`;
   }
   resultDiv.style.display = "block";
-  setTimeout(initializeGame, 5000); // Reset the game after 5 seconds
+  setTimeout(initializeGame, 2000); // Reset the game after 2 seconds
 });
 
 // Hint button event handler
