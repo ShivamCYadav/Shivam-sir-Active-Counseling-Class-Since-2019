@@ -36,12 +36,13 @@ async function initializeGame() {
   sentenceWords = originalSentence.split(" ");
   const scrambledWords = scrambleWords([...sentenceWords]);
 
-  // Display the scrambled words
+  // Display the scrambled words with spaces
   wordsDiv.innerHTML = "";
   scrambledWords.forEach(word => {
     const wordSpan = document.createElement("span");
     wordSpan.classList.add("selectable");
     wordSpan.textContent = word;
+    wordSpan.style.marginRight = "10px"; // Add margin for spacing between words
     wordsDiv.appendChild(wordSpan);
   });
 
