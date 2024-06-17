@@ -14,7 +14,7 @@ async function fetchSentence() {
     const response = await fetch("https://api.quotable.io/random");
     const data = await response.json();
     const sentence = data.content.split(" ");
-    if (sentence.length >= 8 && sentence.length <= 10) {
+    if (sentence.length >= 3 && sentence.length <= 10) {
       return data.content;
     }
     return fetchSentence(); // Fetch another sentence if it doesn't meet the criteria
@@ -36,13 +36,17 @@ async function initializeGame() {
   sentenceWords = originalSentence.split(" ");
   const scrambledWords = scrambleWords([...sentenceWords]);
 
-  // Display the scrambled words with spaces
+  // Display the scrambled words as blocks
   wordsDiv.innerHTML = "";
   scrambledWords.forEach(word => {
     const wordSpan = document.createElement("span");
     wordSpan.classList.add("selectable");
     wordSpan.textContent = word;
-    wordSpan.style.marginRight = "10px"; // Add margin for spacing between words
+    wordSpan.style.display = "inline-block";
+    wordSpan.style.marginRight = "10px";
+    wordSpan.style.padding = "5px";
+    wordSpan.style.border = "1px solid #000";
+    wordSpan.style.cursor = "pointer";
     wordsDiv.appendChild(wordSpan);
   });
 
