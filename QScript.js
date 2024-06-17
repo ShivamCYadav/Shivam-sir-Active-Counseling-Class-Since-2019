@@ -40,45 +40,29 @@ async function initializeGame() {
   wordsDiv.innerHTML = "";
   scrambledWords.forEach(word => {
     const wordSpan = document.createElement("span");
-    wordSpan.classList.add("draggable");
+    wordSpan.classList.add("selectable");
     wordSpan.textContent = word;
     wordsDiv.appendChild(wordSpan);
   });
 
-  // Add drag and drop functionality
-  const draggables = wordsDiv.querySelectorAll(".draggable");
+  // Add click functionality
+  const selectables = wordsDiv.querySelectorAll(".selectable");
 
-  draggables.forEach(draggable => {
-    draggable.setAttribute("draggable", true);
-    draggable.addEventListener("dragstart", dragStart);
+  selectables.forEach(selectable => {
+    selectable.addEventListener("click", selectWord);
   });
 
-  sentenceDiv.addEventListener("dragover", dragOver);
-  sentenceDiv.addEventListener("drop", drop);
   resultDiv.style.display = "none";
   sentenceDiv.innerHTML = "";
   hintCount = 0;
   hintBtn.disabled = false;
 }
 
-// Drag and drop event handlers
-function dragStart(event) {
-  event.dataTransfer.setData("text", event.target.textContent);
-}
-
-function dragOver(event) {
-  event.preventDefault();
-}
-
-function drop(event) {
-  event.preventDefault();
-  const droppedText = event.dataTransfer.getData("text");
-  const wordElement = Array.from(wordsDiv.querySelectorAll(".draggable"))
-    .find(word => word.textContent === droppedText);
-  if (wordElement) {
-    wordElement.style.display = "none";
-    sentenceDiv.appendChild(document.createTextNode(droppedText + " "));
-  }
+// Function to handle word selection
+function selectWord(event) {
+  const selectedWord = event.target.textContent;
+  event.target.style.display = "none";
+  sentenceDiv.appendChild(document.createTextNode(selectedWord + " "));
 }
 
 // Submit button event handler
