@@ -50,7 +50,7 @@
         <form id="selectionForm">
             <div class="mb-3">
                 <label for="boardSelect" class="form-label">Select Section</label>
-                <select class="form-select" id="boardSelect">
+                <select class="form-select" id="boardSelect" required>
                     <option value="" disabled selected>Select here</option>
                     <option value="college">College</option>
                     <option value="school">School</option>
@@ -58,7 +58,7 @@
             </div>
             <div class="mb-3" id="collegeClasses" style="display: none;">
                 <label for="collegeClassSelect" class="form-label">Select College Class</label>
-                <select class="form-select" id="collegeClassSelect">
+                <select class="form-select" id="collegeClassSelect" required>
                     <option value="" disabled selected>Select class</option>
                     <option value="11th">11th Science</option>
                     <option value="12th">12th Science</option>
@@ -66,7 +66,7 @@
             </div>
             <div class="mb-3" id="schoolClasses" style="display: none;">
                 <label for="schoolClassSelect" class="form-label">Select School Class</label>
-                <select class="form-select" id="schoolClassSelect">
+                <select class="form-select" id="schoolClassSelect" required>
                     <option value="" disabled selected>Select class</option>
                     <option value="1st-2nd">1st to 2nd</option>
                     <option value="3rd-4th">3rd to 4th</option>
@@ -77,7 +77,7 @@
             </div>
             <div class="mb-3" id="collegeSubjects" style="display: none;">
                 <label for="collegeSubjectsSelect" class="form-label">Select College Subjects</label>
-                <select class="form-select" id="collegeSubjectsSelect">
+                <select class="form-select" id="collegeSubjectsSelect" required>
                     <option value="" disabled selected>Select subjects</option>
                     <option value="physics">Physics</option>
                     <option value="maths">Mathematics</option>
@@ -87,7 +87,7 @@
             </div>
             <div class="mb-3" id="schoolSubjects" style="display: none;">
                 <label for="schoolSubjectsSelect" class="form-label">Select School Subjects</label>
-                <select class="form-select" id="schoolSubjectsSelect">
+                <select class="form-select" id="schoolSubjectsSelect" required>
                     <option value="" disabled selected>Select subjects</option>
                     <option value="english">English</option>
                     <option value="hindi">Hindi</option>
@@ -104,20 +104,19 @@
         </div>
     </div>
 
-    <!-- CBSE Modal -->
-    <div class="modal fade" id="collegeModal" tabindex="-1" aria-labelledby="collegeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+    <!-- Modal for Files -->
+    <div class="modal fade" id="fileModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="collegeModalLabel">Available Files</h5>
+                    <h5 class="modal-title" id="fileModalLabel">File Availability</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="collegeFilesList">No files available for selected subjects.</p>
+                    <p id="fileModalMessage">No notes available for this subject currently. Please try again later.</p>
                 </div>
                 <div class="modal-footer">
-                    <button id="downloadBtn" class="btn btn-primary">Download</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -189,18 +188,23 @@
                 var collegeSubject = document.getElementById('collegeSubjectsSelect').value;
 
                 if (collegeClass !== '' && collegeSubject !== '') {
-                    var files = getCollegeFiles(collegeSubject);
+                    var files = getCollegeFiles(collegeClass, collegeSubject);
                     if (files.length > 0) {
+                        // Show files modal with available files
                         var filesList = files.map(function (file) {
                             return '<li>' + file + '</li>';
                         }).join('');
-                        document.getElementById('collegeFilesList').innerHTML = '<ul>' + filesList + '</ul>';
-                        var collegeModal = new bootstrap.Modal(document.getElementById('collegeModal'), {
+                        document.getElementById('fileModal').querySelector('.modal-body').innerHTML = '<ul>' + filesList + '</ul>';
+                        var fileModal = new bootstrap.Modal(document.getElementById('fileModal'), {
                             keyboard: false
                         });
-                        collegeModal.show();
+                        fileModal.show();
                     } else {
-                        alert('No notes available for this subject currently. Please try again later.');
+                        // Show modal for no files available
+                        var fileModal = new bootstrap.Modal(document.getElementById('fileModal'), {
+                            keyboard: false
+                        });
+                        fileModal.show();
                     }
                 } else {
                     alert('Please select class and subject.');
@@ -210,18 +214,23 @@
                 var schoolSubject = document.getElementById('schoolSubjectsSelect').value;
 
                 if (schoolClass !== '' && schoolSubject !== '') {
-                    var files = getSchoolFiles(schoolSubject);
+                    var files = getSchoolFiles(schoolClass, schoolSubject);
                     if (files.length > 0) {
+                        // Show files modal with available files
                         var filesList = files.map(function (file) {
                             return '<li>' + file + '</li>';
                         }).join('');
-                        document.getElementById('collegeFilesList').innerHTML = '<ul>' + filesList + '</ul>';
-                        var collegeModal = new bootstrap.Modal(document.getElementById('collegeModal'), {
+                        document.getElementById('fileModal').querySelector('.modal-body').innerHTML = '<ul>' + filesList + '</ul>';
+                        var fileModal = new bootstrap.Modal(document.getElementById('fileModal'), {
                             keyboard: false
                         });
-                        collegeModal.show();
+                        fileModal.show();
                     } else {
-                        alert('No notes available for this subject currently. Please try again later.');
+                        // Show modal for no files available
+                        var fileModal = new bootstrap.Modal(document.getElementById('fileModal'), {
+                            keyboard: false
+                        });
+                        fileModal.show();
                     }
                 } else {
                     alert('Please select class and subject.');
@@ -229,45 +238,54 @@
             }
         });
 
-        function getCollegeFiles(subject) {
-            // Replace with actual logic to fetch files based on subject
-            switch (subject) {
-                case 'physics':
-                    return ['Physics Notes.pdf'];
-                case 'maths':
-                    return ['Mathematics Notes.pdf'];
-                case 'chemistry':
-                    return ['Chemistry Notes.pdf'];
-                case 'biology':
-                    return ['Biology Notes.pdf'];
-                default:
-                    return [];
+        function getCollegeFiles(collegeClass, collegeSubject) {
+            // Replace with actual logic to fetch files based on class and subject
+            var files = [];
+            switch (collegeClass) {
+                case '11th':
+                    switch (collegeSubject) {
+                        case 'physics':
+                            files = ['11th Physics chapter No. 1 - Units And Measurement.pdf'];
+                            break;
+                        // Add more cases for other subjects as needed
+                    }
+                    break;
+                case '12th':
+                    switch (collegeSubject) {
+                        // Add cases for 12th class subjects
+                    }
+                    break;
             }
+            return files;
         }
 
-        function getSchoolFiles(subject) {
-            // Replace with actual logic to fetch files based on subject
-            switch (subject) {
-                case 'english':
-                    return ['English Notes.pdf'];
-                case 'hindi':
-                    return ['Hindi Notes.pdf'];
-                case 'marathi':
-                    return ['Marathi Notes.pdf'];
-                case 'others':
-                    return ['Other Subjects Notes.pdf'];
-                default:
-                    return [];
+        function getSchoolFiles(schoolClass, schoolSubject) {
+            // Replace with actual logic to fetch files based on class and subject
+            var files = [];
+            switch (schoolClass) {
+                case '1st-2nd':
+                    switch (schoolSubject) {
+                        case 'english':
+                            files = ['10th-Eng-WS.pdf'];
+                            break;
+                        // Add more cases for other subjects as needed
+                    }
+                    break;
+                case '3rd-4th':
+                    // Add cases for 3rd-4th class subjects
+                    break;
+                case '5th-6th':
+                    // Add cases for 5th-6th class subjects
+                    break;
+                case '7th-9th':
+                    // Add cases for 7th-9th class subjects
+                    break;
+                case '10th':
+                    // Add cases for 10th class subjects
+                    break;
             }
+            return files;
         }
-
-        // Handling download confirmation
-        document.getElementById('downloadBtn').addEventListener('click', function () {
-            var downloadConfirmModal = new bootstrap.Modal(document.getElementById('pdfModal'), {
-                keyboard: false
-            });
-            downloadConfirmModal.show();
-        });
     </script>
 
 </body>
