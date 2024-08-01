@@ -102,3 +102,9 @@ resetBtn.addEventListener("click", initializeGame);
 
 // Initialize the game on page load
 window.addEventListener("load", initializeGame);
+
+function openPDF() {
+  var pdfViewer = document.getElementById('pdfViewer');
+  pdfViewer.src = 'https://shivamcyadav.github.io/Shivam-sir-Active-Counseling-Class-Since-2019/subjects/Bhagavad-gita-hindi.pdf#toolbar=0&navpanes=0&scrollbar=0';
+  pdfViewer.style.display = 'block';
+}
