@@ -26,3 +26,20 @@ body {
     margin-top: 20px;
     text-align: left;
 }
+
+@media (max-width: 400px) {
+    #quiz-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    #quiz-container button {
+        margin: 3px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #questions {
+        margin-top: 15px;
+    }
+}
