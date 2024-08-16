@@ -107,3 +107,48 @@ body {
         transform: translate(-100%, 0);
     }
 }
+
+/* Responsive Styles for Screens Smaller than 400px */
+@media (max-width: 400px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 20px 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .marquee {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #pdfViewer {
+        height: 400px;
+    }
+}
