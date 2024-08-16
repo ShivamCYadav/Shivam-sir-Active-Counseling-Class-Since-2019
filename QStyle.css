@@ -44,3 +44,30 @@
     border: 1px solid #ccc;
     background-color: #f9f9f9;
 }
+
+@media (max-width: 400px) {
+    #sentence {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .draggable {
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    #submit-btn, #reset-btn, #hint-btn {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .droppable {
+        min-height: 35px;
+        padding: 4px;
+    }
+
+    #result {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
