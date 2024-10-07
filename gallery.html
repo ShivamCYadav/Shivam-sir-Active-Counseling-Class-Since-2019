@@ -8,6 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="indexStyle.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
     <style>
         .gallery {
             display: flex;
@@ -15,105 +22,223 @@
             justify-content: center;
             margin: 20px;
         }
+
         .gallery-item {
             margin: 10px;
-            border: 2px solid #ddd;
             border-radius: 4px;
-            overflow: hidden;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .gallery-item img, .gallery-item video {
-            width: 100%;
-            height: auto;
-        }
-        .gallery-item video {
-            display: block;
-        }
-        .gallery-item h3 {
-            margin: 0;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
         }
 
+        .gallery-card {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+
+        .gallery-card img,
+        .gallery-card video {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+            height: auto;
+        }
+
+        .gallery-card h3 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <div class="header text-center">
-        <div class="container">
-            <h1><i class="fas fa-graduation-cap"></i> Active Counseling Class</h1>
-            <p>Redefining Success Since 2019</p>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Active Counseling Class</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home | </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery">Photo Gallery | </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="quiz.html">Quiz<sup style="color: rgb(238, 111, 111); font-weight: bold;">new</sup> | </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="subject.html">Subjects</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header"></div>
 
+    <!-- Gallery Section -->
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-6 offset-md-3">
-                <h1 class="text-center mb-4">Event Gallery by Active Counseling Class</h1>
-                    <!-- Yoga Day -->
-        <div class="gallery-item">
-            <h3>Yoga Day</h3>
-            <img src="photos&videos/B1-yogaDay-image.webp" alt="Yoga Day Photo 1">
-        </div>
-        <div class="gallery-item">
-            <h3>Yoga Day</h3>
-            <img src="photos&videos/IMG-20240621-WA0036.jpg" alt="Yoga Day Photo 2">
-        </div>
-                <div class="gallery-item">
-            <h3>Yoga Day</h3>
-            <img src="photos&videos/20240621_213233.jpg" alt="Yoga Day Photo 2">
-        </div>
-                <div class="gallery-item">
-            <h3>Yoga Day</h3>
-            <img src="photos&videos/IMG-20240621-WA0035.jpg" alt="Yoga Day Photo 2">
-        </div>
-        <div class="gallery-item">
-            <h3>Yoga Day</h3>
-            <video controls>
-                <source src="photos&videos/B1-yogaDay-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+        <h1 class="text-center my-5">Event Gallery by Active Counseling Class</h1>
+
+        <!-- Sorting and Filtering Options -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+                <label for="filter" class="me-2">Filter:</label>
+                <select id="filter" class="form-select d-inline w-auto">
+                    <option value="all">All</option>
+                    <option value="photos">Photos</option>
+                    <option value="videos">Videos</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="items-per-page" class="me-2">Items per page:</label>
+                <select id="items-per-page" class="form-select d-inline w-auto">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
             </div>
         </div>
-    </div>
-        <footer class="footer text-center fixed-bottom">
-        <div class="container">
-            <p>copyright &copy; Active Counseling Class 2019</p>
+
+        <div class="row" id="gallery-items">
+            <!-- Gallery Item 1 -->
+            <div class="col-md-4 gallery-item" data-type="photo">
+                <div class="card gallery-card">
+                    <img src="photos&videos/B1-yogaDay-image.webp" class="card-img-top" alt="Yoga Day Photo 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Yoga Day</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="col-md-4 gallery-item" data-type="photo">
+                <div class="card gallery-card">
+                    <img src="photos&videos/IMG-20240621-WA0036.jpg" class="card-img-top" alt="Yoga Day Photo 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Yoga Day</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="col-md-4 gallery-item" data-type="photo">
+                <div class="card gallery-card">
+                    <img src="photos&videos/20240621_213233.jpg" class="card-img-top" alt="Yoga Day Photo 3">
+                    <div class="card-body">
+                        <h3 class="card-title">Yoga Day</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="col-md-4 gallery-item" data-type="photo">
+                <div class="card gallery-card">
+                    <img src="photos&videos/IMG-20240621-WA0035.jpg" class="card-img-top" alt="Yoga Day Photo 4">
+                    <div class="card-body">
+                        <h3 class="card-title">Yoga Day</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Video Item -->
+            <div class="col-md-4 gallery-item" data-type="video">
+                <div class="card gallery-card">
+                    <video controls class="card-img-top">
+                        <source src="photos&videos/B1-yogaDay-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <h3 class="card-title">Yoga Day Video</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+
+        <!-- Pagination Section -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center mt-4" id="pagination">
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+    <div id="footer"></div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom Script -->
-    <script src="quizScript.js"></script>
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const itemsPerPageDropdown = document.getElementById('items-per-page');
+        const filterDropdown = document.getElementById('filter');
+        const paginationContainer = document.getElementById('pagination');
+        let currentPage = 1;
+        let itemsPerPage = parseInt(itemsPerPageDropdown.value);
+    
+        function updateGallery() {
+            const filterValue = filterDropdown.value.toLowerCase(); // Get the filter value
+            const totalItems = galleryItems.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+    
+            // Initialize counter for filtered items
+            let filteredItems = 0;
+    
+            galleryItems.forEach((item, index) => {
+                // Check if the item matches the filter
+                const isImage = item.querySelector('img') !== null; // Check if it has an image
+                const isVideo = item.querySelector('video') !== null; // Check if it has a video
+                const matchesFilter = (filterValue === 'all' || 
+                                       (filterValue === 'photos' && isImage) || 
+                                       (filterValue === 'videos' && isVideo));
+    
+                // Only show items that match the filter and within the current page range
+                if (matchesFilter) {
+                    filteredItems++;
+                    item.style.display = (filteredItems > startIndex && filteredItems <= endIndex) ? 'block' : 'none';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+    
+            // Update pagination based on filtered items
+            updatePagination(Math.ceil(filteredItems / itemsPerPage));
+        }
+    
+        function updatePagination(totalPages) {
+            // Clear previous pagination
+            paginationContainer.innerHTML = '';
+    
+            // Previous button
+            const prevItem = document.createElement('li');
+            prevItem.className = 'page-item ' + (currentPage === 1 ? 'disabled' : '');
+            prevItem.innerHTML = `<span class="page-link" onclick="changePage(${currentPage - 1})">Previous</span>`;
+            paginationContainer.appendChild(prevItem);
+    
+            // Page number buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const pageItem = document.createElement('li');
+                pageItem.className = 'page-item ' + (currentPage === i ? 'active' : '');
+                pageItem.innerHTML = `<span class="page-link" onclick="changePage(${i})">${i}</span>`;
+                paginationContainer.appendChild(pageItem);
+            }
+    
+            // Next button
+            const nextItem = document.createElement('li');
+            nextItem.className = 'page-item ' + (currentPage === totalPages ? 'disabled' : '');
+            nextItem.innerHTML = `<span class="page-link" onclick="changePage(${currentPage + 1})">Next</span>`;
+            paginationContainer.appendChild(nextItem);
+        }
+    
+        function changePage(page) {
+            currentPage = page;
+            updateGallery();
+        }
+    
+        itemsPerPageDropdown.addEventListener('change', (e) => {
+            itemsPerPage = parseInt(e.target.value);
+            currentPage = 1; // Reset to the first page
+            updateGallery();
+        });
+    
+        filterDropdown.addEventListener('change', () => {
+            currentPage = 1; // Reset to the first page
+            updateGallery();
+        });
+    
+        // Initial gallery setup
+        updateGallery();
+    </script>    
 </body>
+
 </html>
