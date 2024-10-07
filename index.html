@@ -9,86 +9,45 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="indexStyle.css" rel="stylesheet">
     <link href="QStyle.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <div class="header text-center">
-        <div class="container">
-            <h1><i class="fas fa-graduation-cap"></i> Active Counseling Class</h1>
-            <p>Redefining Success Since 2019</p>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Active Counseling Class</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home | </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Photo Gallery<sup style="color: rgb(238, 111, 111); font-weight: bold;">new</sup> | </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="quiz.html">Quiz<sup style="color: rgb(238, 111, 111); font-weight: bold;">new</sup> | </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=" subject.html">Subjects</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header"></div>
 
     <div class="container content">
         <div class="marquee">
-            <span><b>Admission Closed</b> | we provide 11th, 12th Science PCM, PCMB | Diploma and Engineering - M1, M2, M3, SOM, FMM | 1st to 10th STD - Lowest Fees | No Extra Fees for Extra Class</span>
+            <span><b>Admission Closed</b> | we provide 11th, 12th Science PCM, PCMB | Diploma and Engineering - M1, M2,
+                M3, SOM, FMM | 1st to 10th STD - Lowest Fees | No Extra Fees for Extra Class</span>
         </div>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>What's your Score!</strong> You can Checkout your knowlegde on our Quiz section.
-  <button class="primary" >
-    <a href='quiz.html' class="button-77" role="button">go to quiz</a>
-  </button>
-</div>
-        <div class="row row-cols-1 row-cols-md-2 mb-5">
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="card-title">Teaching Staff</h2>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-user-tie"></i> Shivam Yadav (BE) - 7 years experience <progress value="7" max="10"></progress></li>
-                            <li><i class="fas fa-user-tie"></i> Neha Bhamare (MCS) - 3 years experience <progress value="3" max="10"></progress></li>
-                            <li><i class="fas fa-user-tie"></i> Aditya Singh (BCS) - 2 years experience <progress value="2" max="10"></progress></li>
-                            <li><i class="fas fa-user-tie"></i> Ritika Yadav (BPTh) - 2 years experience <progress value="5" max="10"></progress></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <h2 class="card-title">Contact Us</h2>
-                        <p class="card-text"><i class="fas fa-phone-alt"></i> Phone: <span class="contact-number"><a href="tel:9860985557">9860985557</a></span></p>
-                        <p class="card-text"><i class="fab fa-whatsapp"></i> WhatsApp: <span class="contact-number"><a href="tel:9822457236">9822457236</a></span></p>
-                        <p class="card-text"><i class="fab fa-facebook-square"></i> Facebook: <a href="https://www.facebook.com/ACclass4">Our FB Page</a></p>
-                    </div>
-                </div>
-            </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>What's your Score!</strong> You can Checkout your knowlegde on our Quiz section.
+            <button class="primary">
+                <a href='quiz.html' class="button-77" role="button">go to quiz</a>
+            </button>
         </div>
+        
 
         <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">About Us</h2>
-                        <p                         class="card-text">Welcome to Active Counseling Class. We offer quality education for students from 1st to 10th standard in English, Marathi, Hindi, and semi-English. We cater to Maharashtra Board and CBSE students.</p>
-                        <p class="card-text">For 11th and 12th standard, we offer Science courses with specializations in PCM (Physics, Chemistry, Mathematics) and PCMB (Physics, Chemistry, Mathematics, Biology). We also provide special English classes.</p>
-                        <p class="card-text">Additional subjects we teach include Spoken English, and Diploma and Engineering subjects of Civil and Mechanical.</p>
+                        <p class="card-text">Welcome to Active Counseling Class. We offer quality education for students
+                            from 1st to 10th standard in English, Marathi, Hindi, and semi-English. We cater to
+                            Maharashtra Board and CBSE students.</p>
+                        <p class="card-text">For 11th and 12th standard, we offer Science courses with specializations
+                            in PCM (Physics, Chemistry, Mathematics) and PCMB (Physics, Chemistry, Mathematics,
+                            Biology). We also provide special English classes.</p>
+                        <p class="card-text">Additional subjects we teach include Spoken English, and Diploma and
+                            Engineering subjects of Civil and Mechanical.</p>
                     </div>
                 </div>
             </div>
@@ -97,9 +56,9 @@
                     <div class="card-body text-center">
                         <h2 class="card-title">Class taken for:</h2>
                         <p class="card-text">
-                            <h5><b>1st to 10th</b> standard in English, Marathi, Hindi, and semi-English</h5>
-                            <h5>11th and 12th Science <b>PCM or PCMB</b></h5>
-                            <h5>Diploma and Engineering subjects of <b>Civil and Mechanical</b>.</h5>
+                        <h5><b>1st to 10th</b> standard in English, Marathi, Hindi, and semi-English</h5>
+                        <h5>11th and 12th Science <b>PCM or PCMB</b></h5>
+                        <h5>Diploma and Engineering subjects of <b>Civil and Mechanical</b>.</h5>
                         </p>
                         <h4 class="card-text fw-bold">Join Us to Shape Your Future!</h4>
                     </div>
@@ -108,74 +67,125 @@
         </div>
 
         <div class="row  mb-5">
-                <div class="col-md-12 mb-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <h2 class="card-title">Test your Sentence Making Power</h2>
-                            <div id="sentence" class="droppable"></div>
-                            <div id="words"></div>
-                            <button id="submit-btn">Submit</button>
-                            <button id="reset-btn">Reset</button>
-                            <button id="hint-btn">Hint</button>
-                            <div id="result" style="display: none;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div class="row  mb-5">
-                <div class="col-md-12 mb-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                              <strong>Read Bhagwat geeta in Hindi!</strong> You can Checkout your knowlegde on our Quiz section too.
-                              <button class="primary" onclick="openPDF()">
-                                  Open & Read Now
-                              </button>
-                                <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-        <div class="row mb-5">
             <div class="col-md-12 mb-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h2 class="card-title">Our Results</h2>
-                        <div class="results">
-                            <p><i class="fas fa-award"></i> 2024 10th SSC - Maharashtra Board Result: 100%</p>
-                            <p><i class="fas fa-award"></i> 2023 10th SSC - Maharashtra Board Result: 100%</p>
-                            <p><i class="fas fa-award"></i> 2022 10th SSC - Maharashtra Board Result: 100%</p>
-                            <p><i class="fas fa-award"></i> 2022 12th HSC - Maharashtra Board Result: 100%</p>
-                            <p><i class="fas fa-award"></i> 2021 10th SSC - Maharashtra Board Result: 100%</p>
-                            <p><i class="fas fa-award"></i> 2020 10th SSC - Maharashtra Board Result: 100%</p>
-                        </div>
+                        <h2 class="card-title">Test your Sentence Making Power</h2>
+                        <div id="sentence" class="droppable"></div>
+                        <div id="words"></div>
+                        <button id="submit-btn">Submit</button>
+                        <button id="reset-btn">Reset</button>
+                        <button id="hint-btn">Hint</button>
+                        <div id="result" style="display: none;"></div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="row mb-5">
-                <div class="col-md-12 mb-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <h2 class="card-title">Find Us</h2>
-                            <p class="card-text">Location:</p>
-                            <div class="map-link">
-                                <a href="https://maps.app.goo.gl/toKZryr2aXKKUuEQA" target="_blank">Active Counseling Class Location <i class="fas fa-map-marker-alt"></i></a>
-                            </div>
-                        </div>
+        <div class="row  mb-5"></div>
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Fun Facts about Indian History, Geography, and Science</h2>
+                    <div class="fact-box" id="factBox">
+                        <h3 id="factTitle"></h3>
+                        <p id="factContent"></p>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-outline-primary" id="prevBtn" onclick="prevFact()">Previous</button>
+                        <button class="btn btn-outline-primary" id="nextBtn" onclick="nextFact()">Next</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer text-center">
-        <div class="container">
-            <p>&copy; 2019 Active Counseling Class.</p>
+
+    <div class="row mb-5">
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Our Results</h2>
+                    <div class="results">
+                        <p><i class="fas fa-award"></i> 2024 10th SSC - Maharashtra Board Result: 100%</p>
+                        <p><i class="fas fa-award"></i> 2023 10th SSC - Maharashtra Board Result: 100%</p>
+                        <p><i class="fas fa-award"></i> 2022 10th SSC - Maharashtra Board Result: 100%</p>
+                        <p><i class="fas fa-award"></i> 2022 12th HSC - Maharashtra Board Result: 100%</p>
+                        <p><i class="fas fa-award"></i> 2021 10th SSC - Maharashtra Board Result: 100%</p>
+                        <p><i class="fas fa-award"></i> 2020 10th SSC - Maharashtra Board Result: 100%</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="row row-cols-1 row-cols-md-2 mb-5">
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Teaching Staff</h2>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-user-tie"></i> Shivam Yadav (BE) - 7 years experience <progress
+                                value="7" max="10"></progress></li>
+                        <li><i class="fas fa-user-tie"></i> Neha Bhamare (MCS) - 3 years experience <progress
+                                value="3" max="10"></progress></li>
+                        <li><i class="fas fa-user-tie"></i> Aditya Singh (BCS) - 2 years experience <progress
+                                value="2" max="10"></progress></li>
+                        <li><i class="fas fa-user-tie"></i> Ritika Yadav (BPTh) - 2 years experience <progress
+                                value="5" max="10"></progress></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Contact Us</h2>
+                    <p class="card-text"><i class="fas fa-phone-alt"></i> Phone: <span class="contact-number"><a
+                                href="tel:9860985557">9860985557</a></span></p>
+                    <p class="card-text"><i class="fab fa-whatsapp"></i> WhatsApp: <span class="contact-number"><a
+                                href="tel:9822457236">9822457236</a></span></p>
+                    <p class="card-text"><i class="fab fa-facebook-square"></i> Facebook: <a
+                            href="https://www.facebook.com/ACclass4">Our FB Page</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Find Us</h2>
+                    <p class="card-text">Location:</p>
+                    <div class="map-link">
+                        <a href="https://maps.app.goo.gl/toKZryr2aXKKUuEQA" target="_blank">Active Counseling Class
+                            Location <i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row  mb-5">
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Read Bhagwat geeta in Hindi!</strong> You can Checkout your knowlegde on our Quiz
+                        section too.
+                        <button class="primary" onclick="openPDF()">
+                            Open & Read Now
+                        </button>
+                        <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footer"></div>
+
     <script src="QScript.js"></script>
+    <script src="facts.js"></script>
 </body>
 
 </html>
